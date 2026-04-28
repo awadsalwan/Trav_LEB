@@ -7,14 +7,20 @@
 }
 
 body {
-    color: #333;
-  
+    color: #fff;
     background: url('./images/lebanon.jpg') no-repeat center center fixed;
     background-size: cover;
-  
     min-height: 100vh;
+    position: relative;
   }
 
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45); /* same idea as hero overlay */
+    z-index: -1;
+  }
 /* ===== NAVBAR CLEAN + CONSISTENT VERSION ===== */
 .navbar {
     display: flex;
@@ -159,7 +165,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+ 
 }
 
 .hero-content {

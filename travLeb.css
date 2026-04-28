@@ -7,45 +7,143 @@
 }
 
 body {
-  background: #f5f7fa;
-  color: #333;
- 
-    background: url('./images/lebanon.jpg') no-repeat center center/cover;
-    min-height: 100vh;
+    color: #333;
   
-}
+    background: url('./images/lebanon.jpg') no-repeat center center fixed;
+    background-size: cover;
+  
+    min-height: 100vh;
+  }
 
-/* ===== NAVBAR ===== */
+/* ===== NAVBAR CLEAN + CONSISTENT VERSION ===== */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background: linear-gradient(135deg, #4facfe, #00f2fe);
-  color: white;
-}
-
-.navbar h1 {
-  font-size: 24px;
-}
-
-.navbar ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.navbar a:hover {
-  opacity: 0.8;
-}
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    height: 55px;              /* 🔥 FIXED HEIGHT */
+    padding: 0 20px;           /* remove vertical padding */
+  
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    color: white;
+  
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* LOGO */
+  .navbar h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+  
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  
+  /* NAV LIST */
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+  
+    height: 100%;
+    align-items: center;
+  }
+  
+  /* NAV ITEMS */
+  .navbar ul li {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  
+  /* LINKS */
+  .navbar a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    padding: 0 10px; /* vertical padding removed */
+  
+    border-radius: 15px;
+    transition: 0.3s;
+  }
+  
+  .navbar a:hover {
+    background: rgba(255,255,255,0.2);
+  }
+  
+  /* ===== SEARCH BAR ===== */
+  .navbar .search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  
+  /* INPUT */
+  .navbar .search-bar input {
+    height: 32px; /* slightly smaller than navbar */
+    padding: 0 60px 0 12px;
+  
+    border-radius: 20px;
+    border: none;
+    outline: none;
+  
+    width: 170px;
+    font-size: 12px;
+    transition: 0.3s;
+  }
+  
+  .navbar .search-bar input:focus {
+    width: 190px;
+  }
+  
+  /* BUTTONS INSIDE INPUT */
+  .navbar .search-bar button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 12px;
+    color: #555;
+  }
+  
+  /* SEARCH BUTTON */
+  #btnSearch {
+    right: 28px;
+  }
+  
+  /* CLEAR BUTTON */
+  #btnClear {
+    right: 6px;
+  }
+  
+  /* HOVER */
+  .navbar .search-bar button:hover {
+    color: #000;
+  }
+  
+  /* REMOVE EXTRA SPACE */
+  .nav-search {
+    margin: 0;
+    padding: 0;
+  }
 /* ===== HERO SECTION ===== */
 .hero {
   height: 80vh;
@@ -111,12 +209,11 @@ body {
 }
 
 .card {
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: 0.3s;
-}
+    background: rgba(255, 255, 255, 0.1); /* glass effect */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    color: white; /* 🔥 important */
+  }
 
 .card:hover {
   transform: translateY(-8px);
